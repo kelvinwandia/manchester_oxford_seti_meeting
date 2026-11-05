@@ -7,6 +7,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Detailed-programme additions (only used on this page) */
+  .row{align-items:start}
+  .row .t small{display:block;font-weight:500;font-size:.8em;opacity:.8}
+  .row .sub{margin:2px 0 0;color:var(--muted);font-size:.88rem}
+  .row.open{background:repeating-linear-gradient(135deg,transparent 0 8px,var(--accent-soft) 8px 10px)}
+  .row.open b{color:var(--muted)}
+  .talks{list-style:none;margin:6px 0 2px;padding:0}
+  .talks li{font-size:.88rem;padding:2px 0;color:var(--text)}
+  .talks li span{display:inline-block;width:3.2em;color:var(--muted);font-variant-numeric:tabular-nums}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 18px;font-size:.85rem;color:var(--muted)}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid var(--line)}
+  @media (max-width:700px){
+    .row .sub{font-size:.74rem}
+    .talks li{font-size:.74rem}
+    .talks li span{width:3.4em}
+  }
+</style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -16,31 +34,37 @@
 <nav><div class="wrap"><a href="index.html">Home</a><a href="registration.html">Registration</a><a href="abstracts.html">Abstracts</a><a href="programme.html" class="active">Programme</a><a href="dates.html">Dates</a><a href="logistics.html">Logistics</a></div></nav>
 <main class="wrap">
 <h2>Programme</h2>
-<p class="note">Draft programme. Contributed talks are 15 minutes (12 min + 3 min questions). Session themes will be set once abstracts are reviewed.</p>
+<p class="note">Draft programme. Contributed talks are 15 minutes (12 min talk + 3 min questions). Session themes and speakers will be added once abstracts are reviewed.</p>
+<div class="legend">
+<span><i style="background:var(--break)"></i>Breaks and catering</span>
+<span><i style="background:var(--accent-soft)"></i>Invited talks, discussion and reception</span>
+<span><i style="background:repeating-linear-gradient(135deg,transparent 0 3px,var(--accent-soft) 3px 5px)"></i>Open slots for extra talks</span>
+</div>
 <div class="days">
 <div class="day"><h3>Day 1<span>09:00&ndash;17:00, then dinner</span></h3>
-<div class="row brk"><div class="t">09:00</div><div><b>Registration and coffee</b></div></div>
-<div class="row"><div class="t">09:30</div><div><b>Welcome</b></div></div>
-<div class="row key"><div class="t">09:45</div><div><b>Invited talk &mdash; Mike</b></div></div>
-<div class="row"><div class="t">10:30</div><div><b>Session 1</b></div></div>
-<div class="row brk"><div class="t">11:15</div><div><b>Coffee</b></div></div>
-<div class="row"><div class="t">11:45</div><div><b>Session 2</b></div></div>
-<div class="row brk"><div class="t">12:45</div><div><b>Lunch</b></div></div>
-<div class="row"><div class="t">14:00</div><div><b>Session 3</b></div></div>
-<div class="row brk"><div class="t">15:15</div><div><b>Tea</b></div></div>
-<div class="row"><div class="t">15:45</div><div><b>Session 4</b></div></div>
-<div class="row"><div class="t">16:30</div><div><b>Wrap-up</b></div></div>
-<div class="row key"><div class="t">Eve.</div><div><b>Dinner reception</b></div></div>
+<div class="row brk"><div class="t">09:00<small>09:30</small></div><div><b>Registration and coffee</b><p class="sub">Schuster Building foyer</p></div></div>
+<div class="row"><div class="t">09:30<small>09:45</small></div><div><b>Welcome and introduction</b><p class="sub">LOC chair</p></div></div>
+<div class="row key"><div class="t">09:45<small>10:30</small></div><div><b>Invited talk &mdash; Mike</b><p class="sub">45 min</p></div></div>
+<div class="row"><div class="t">10:30<small>11:15</small></div><div><b>Session 1</b><p class="sub">Talks 1&ndash;3</p><ul class="talks"><li><span>10:30</span>Talk 1</li><li><span>10:45</span>Talk 2</li><li><span>11:00</span>Talk 3</li></ul></div></div>
+<div class="row brk"><div class="t">11:15<small>11:45</small></div><div><b>Coffee break</b></div></div>
+<div class="row"><div class="t">11:45<small>12:45</small></div><div><b>Session 2</b><p class="sub">Talks 4&ndash;7</p><ul class="talks"><li><span>11:45</span>Talk 4</li><li><span>12:00</span>Talk 5</li><li><span>12:15</span>Talk 6</li><li><span>12:30</span>Talk 7</li></ul></div></div>
+<div class="row brk"><div class="t">12:45<small>14:00</small></div><div><b>Lunch</b><p class="sub">75 min</p></div></div>
+<div class="row"><div class="t">14:00<small>15:15</small></div><div><b>Session 3</b><p class="sub">Talks 8&ndash;12</p><ul class="talks"><li><span>14:00</span>Talk 8</li><li><span>14:15</span>Talk 9</li><li><span>14:30</span>Talk 10</li><li><span>14:45</span>Talk 11</li><li><span>15:00</span>Talk 12</li></ul></div></div>
+<div class="row brk"><div class="t">15:15<small>15:45</small></div><div><b>Tea break</b></div></div>
+<div class="row open"><div class="t">15:45<small>16:30</small></div><div><b>Open slot</b><p class="sub">Up to 3 extra talks, or posters / lightning talks</p></div></div>
+<div class="row"><div class="t">16:30<small>17:00</small></div><div><b>Buffer and wrap-up</b><p class="sub">Absorbs overruns</p></div></div>
+<div class="row key"><div class="t">19:00</div><div><b>Dinner reception</b><p class="sub">Venue TBC</p></div></div>
 </div>
 <div class="day"><h3>Day 2<span>09:00&ndash;16:00</span></h3>
-<div class="row"><div class="t">09:00</div><div><b>Session 5</b></div></div>
-<div class="row brk"><div class="t">10:00</div><div><b>Coffee</b></div></div>
-<div class="row"><div class="t">10:30</div><div><b>Session 6</b></div></div>
-<div class="row brk"><div class="t">12:00</div><div><b>Lunch</b></div></div>
-<div class="row key"><div class="t">13:15</div><div><b>Invited talk &mdash; Andrew</b></div></div>
-<div class="row key"><div class="t">14:00</div><div><b>Discussion: the future of SETI</b></div></div>
-<div class="row"><div class="t">15:30</div><div><b>Closing remarks</b></div></div>
-<div class="row brk"><div class="t">15:45</div><div><b>Farewell tea</b></div></div>
+<div class="row"><div class="t">09:00<small>10:00</small></div><div><b>Session 4</b><p class="sub">Talks 13&ndash;16</p><ul class="talks"><li><span>09:00</span>Talk 13</li><li><span>09:15</span>Talk 14</li><li><span>09:30</span>Talk 15</li><li><span>09:45</span>Talk 16</li></ul></div></div>
+<div class="row brk"><div class="t">10:00<small>10:30</small></div><div><b>Coffee break</b></div></div>
+<div class="row"><div class="t">10:30<small>11:30</small></div><div><b>Session 5</b><p class="sub">Talks 17&ndash;20</p><ul class="talks"><li><span>10:30</span>Talk 17</li><li><span>10:45</span>Talk 18</li><li><span>11:00</span>Talk 19</li><li><span>11:15</span>Talk 20</li></ul></div></div>
+<div class="row open"><div class="t">11:30<small>12:00</small></div><div><b>Open slot</b><p class="sub">Up to 2 extra talks, or extra discussion</p></div></div>
+<div class="row brk"><div class="t">12:00<small>13:15</small></div><div><b>Lunch</b><p class="sub">75 min</p></div></div>
+<div class="row key"><div class="t">13:15<small>14:00</small></div><div><b>Invited talk &mdash; Andrew</b><p class="sub">45 min; sets up the discussion</p></div></div>
+<div class="row key"><div class="t">14:00<small>15:30</small></div><div><b>Discussion: the future of SETI</b><p class="sub">Informal, chaired; 90 min</p></div></div>
+<div class="row"><div class="t">15:30<small>15:45</small></div><div><b>Closing remarks</b><p class="sub">LOC chair</p></div></div>
+<div class="row brk"><div class="t">15:45<small>16:00</small></div><div><b>Farewell tea and departures</b></div></div>
 </div>
 </div>
 </main>
